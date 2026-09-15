@@ -1,0 +1,5 @@
+// import {
+//   "hackathon/consistent_hash" @lib,
+// }
+
+pkgtype(kind: "executable")

@@ -1,0 +1,32 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "hackathon/consistent_hash"
+
+import {
+  "moonbitlang/core/set",
+}
+
+// Values
+
+// Errors
+
+// Types and methods
+pub struct ConsistentHash {
+  replicas : Int
+  nodes : @set.Set[String]
+  mut ring : Array[VirtualNode]
+}
+pub fn ConsistentHash::add_node(Self, String) -> Unit
+pub fn ConsistentHash::distribution(Self, Array[String]) -> Map[String, Int]
+pub fn ConsistentHash::get(Self, String) -> String?
+pub fn ConsistentHash::get_nodes(Self) -> Array[String]
+pub fn ConsistentHash::get_replicas(Self, String, Int) -> Array[String]
+pub fn ConsistentHash::new(Int) -> Self
+pub fn ConsistentHash::node_count(Self) -> Int
+pub fn ConsistentHash::remove_node(Self, String) -> Unit
+pub fn ConsistentHash::virtual_node_count(Self) -> Int
+
+type VirtualNode
+
+// Type aliases
+
+// Traits
